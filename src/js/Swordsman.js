@@ -1,8 +1,8 @@
 import Character from './hero';
 
 export default class Swordsman extends Character {
-  constructor(name, type, health, level, attack, defence) {
-    super(name, type, health, level, attack, defence);
+  constructor(name) {
+    super(name, 'Swordsman');
     this.attack = 40;
     this.defence = 10;
   }

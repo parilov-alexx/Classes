@@ -1,16 +1,24 @@
-import Bowerman from '../bowerman';
+import Bowman from '../bowman';
 import Daemon from '../daemon';
 import Magician from '../magician';
 import Swordsman from '../Swordsman';
 import Undead from '../undead';
 import Zombie from '../zombie';
+import Character from '../hero';
 
-test('should create Bowerman', () => {
-  expect(new Bowerman('John')).toEqual({
+test('Заданный персонаж не существует', () => {
+  expect(() => {
+    const result = new Character('xxx', 'Monster');
+    return result;
+  }).toThrow();
+});
+
+test('should create Bowman', () => {
+  expect(new Bowman('John')).toEqual({
     name: 'John',
     health: 100,
     level: 1,
-    type: 'Bowerman',
+    type: 'Bowman',
     attack: 25,
     defence: 25,
   });
